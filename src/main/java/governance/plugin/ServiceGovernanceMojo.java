@@ -16,6 +16,7 @@ package governance.plugin;
  * limitations under the License.
  */
 
+import com.google.inject.internal.util.$SourceProvider;
 import governance.plugin.rxt.ArtifactCreatorUtil;
 import governance.plugin.rxt.DependencyCreator;
 import governance.plugin.rxt.ModuleCreator;
@@ -31,6 +32,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -77,7 +79,8 @@ public class ServiceGovernanceMojo extends AbstractMojo
 	private DependencyCreator dependencyCreator;
     private ArtifactCreatorUtil artifactCreatorUtil;
 
-    private File currentPOM;
+    //private File currentPOM;
+    private Map<String, File> pomMap;
 
 	/**
      * The Maven project.
@@ -95,6 +98,8 @@ public class ServiceGovernanceMojo extends AbstractMojo
          serviceCreator = new ServiceCreator(getLog(), serviceEndPointRef, genericArtifactManagerEndPointRef);
     	 dependencyCreator = new DependencyCreator(getLog(), dependecnyEndPointRef, genericArtifactManagerEndPointRef);
          artifactCreatorUtil = new ArtifactCreatorUtil(genericArtifactManagerEndPointRef);
+
+         pomMap = new HashMap<String, File>();
     }
     
     public void execute() throws MojoExecutionException
@@ -139,9 +144,14 @@ public class ServiceGovernanceMojo extends AbstractMojo
     		if (children == null){
        		 	getLog().debug("Empty directory skipping.. :" + path);
     		}else{
-                File pomFile = findPOMFile(children);
+                File pomFile = findPOMFileInCurrentDirectory(children);
                 if (pomFile != null){
-                    currentPOM = pomFile;
+                    //currentPOM = pomFile;
+
+                    System.out.println("======================:" + pomFile.getParent());
+                    System.out.println("======================:" + pomFile.getPath());
+
+                    pomMap.put(pomFile.getParent(), pomFile);
                 }
 
     			for (File child : children){
@@ -175,7 +185,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
 
             for (int i = 0; i < serviceInfoList.size(); i++){
                 serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
-                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i));
+                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i), file);
             }
 
         }else if (file.getName().endsWith(".java")){
@@ -186,14 +196,19 @@ public class ServiceGovernanceMojo extends AbstractMojo
 
             for (int i = 0; i < serviceInfoList.size(); i++){
                 serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
-                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i));
+                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i), file);
             }
         }
 
 
     }
 
-    public void linkServiceWithModule(Map<String, String> parameters) throws MojoExecutionException {
+    public void linkServiceWithModule(Map<String, String> parameters, File file) throws MojoExecutionException {
+
+        File currentPOM = findNearestPOMFile(file);
+        if (currentPOM == null){
+            throw new MojoExecutionException("Cannot find a POM related to this module. [file=" + file.getAbsolutePath() + "]");
+        }
 
         Model model = PomParser.parse(currentPOM);
         if (model == null){
@@ -217,7 +232,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
         addAssociation(moduleAbsolutPath, dependencyAbsolutePath, "ownedBy");
     }
 
-    File findPOMFile(File[] files){
+    private File findPOMFileInCurrentDirectory(File[] files){
         File file = null;
 
         for (int index = 0; index < files.length; index++){
@@ -229,5 +244,16 @@ public class ServiceGovernanceMojo extends AbstractMojo
             }
         }
         return null;
+    }
+    
+    private File findNearestPOMFile(File file){
+        while (true){
+
+            File pomFile = pomMap.get(file.getParent());
+            if (pomFile != null){
+                return pomFile;
+            }
+            file = file.getParentFile();
+        }
     }
 }

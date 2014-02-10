@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="Updated to work with default service artifact&#10;">
+    <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -90,10 +90,10 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/utils/PackageToNamespace.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceGovernanceSOAPMessageCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/rxt/AbstractArtifactCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
       </list>
     </option>
   </component>
@@ -584,7 +584,11 @@
       <created>1392055797211</created>
       <updated>1392055797211</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated to set default package if the namespace is not available&#10;">
+      <created>1392056470699</created>
+      <updated>1392056470699</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,7 +637,8 @@
     <MESSAGE value="Adding namespace extraction" />
     <MESSAGE value="Updated with string, string map for extensibility.." />
     <MESSAGE value="Updated to work with default service artifact&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated to work with default service artifact&#10;" />
+    <MESSAGE value="Updated to set default package if the namespace is not available&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to set default package if the namespace is not available&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -705,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/rxt/DependencyCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="32" selection-start="1604" selection-end="1604" vertical-scroll-proportion="1.2252836" vertical-offset="0" max-vertical-offset="1134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Software/jdk1.6.0_45/src.zip!/org/w3c/dom/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="17" selection-start="6029" selection-end="6029" vertical-scroll-proportion="-1.6917808" vertical-offset="3238" max-vertical-offset="16560">
@@ -729,27 +727,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/org.eclipse.jdt.core/3.7.1/org.eclipse.jdt.core-3.7.1.jar!/org/eclipse/jdt/core/dom/ASTNode.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="28" selection-start="1912" selection-end="1912" vertical-scroll-proportion="-26.28" vertical-offset="63" max-vertical-offset="5058" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xservices.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="34" selection-start="0" selection-end="1551" vertical-scroll-proportion="0.7200622" vertical-offset="23" max-vertical-offset="846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/module.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="876" selection-end="876" vertical-scroll-proportion="0.10419907" vertical-offset="275" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dependency.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="51" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.60808706" vertical-offset="329" max-vertical-offset="972">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceGovernanceSOAPMessageCreator.java">
@@ -780,26 +757,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="5" selection-start="7044" selection-end="7044" vertical-scroll-proportion="3.481775" vertical-offset="467" max-vertical-offset="4014">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="39" selection-start="4636" selection-end="4636" vertical-scroll-proportion="0.74726987" vertical-offset="1141" max-vertical-offset="1782">
           <folding>
             <element signature="e#2241#2257#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2265" selection-end="2265" vertical-scroll-proportion="1.5688074" vertical-offset="0" max-vertical-offset="1314">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,6 +792,48 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/utils/PackageToNamespace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="25" selection-start="135" selection-end="135" vertical-scroll-proportion="0.16513762" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2265" selection-end="2265" vertical-scroll-proportion="1.5688074" vertical-offset="0" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/rxt/DependencyCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="61" selection-start="1097" selection-end="1217" vertical-scroll-proportion="0.6146789" vertical-offset="138" max-vertical-offset="1134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xservices.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.66614664" vertical-offset="23" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/module.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.69422776" vertical-offset="275" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="47" selection-start="10452" selection-end="10452" vertical-scroll-proportion="1.1100917" vertical-offset="3414" max-vertical-offset="4446">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dependency.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="29" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.69422776" vertical-offset="329" max-vertical-offset="972">
           <folding />
         </state>
       </provider>
