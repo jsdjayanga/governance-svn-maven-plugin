@@ -1,6 +1,8 @@
 package governance.plugin.services;
 
+import com.google.inject.internal.util.$SourceProvider;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -41,6 +43,7 @@ public class ServicesXMLParser {
                         String name = (nameNode != null && nameNode.getTextContent() != "")? nameNode.getTextContent(): "un-named";
                         String version = (versionNode != null && versionNode.getTextContent() != "")? versionNode.getTextContent(): "1.0.0";
                         String description = (descriptionNode != null && descriptionNode.getTextContent() != "")? descriptionNode.getTextContent(): "";
+                        String namespace = getNamespace(node);
 
                         String[] serviceInfo = {name, version, "Axis2", description};
                         serviceInfoList.add(serviceInfo);
@@ -58,5 +61,43 @@ public class ServicesXMLParser {
         }
 
         return serviceInfoList;
+    }
+
+    private static String getNamespace(Node node){
+
+        Node namespaceNode = node.getAttributes().getNamedItem("targetNamespace");
+        if (namespaceNode != null && namespaceNode.getTextContent() != ""){
+            return namespaceNode.getTextContent();
+        }
+
+        NodeList nodeList = node.getChildNodes();
+        if (nodeList != null){
+            for (int index = 0; index < nodeList.getLength(); index++){
+                Node cnode = nodeList.item(index);
+                if (cnode != null){
+                    if (cnode.getNodeName().equals("parameter")){
+                        NamedNodeMap namedNodeMap = cnode.getAttributes();
+                        if (namedNodeMap != null){
+                            Node nameNode = namedNodeMap.getNamedItem("name");
+                            if (nameNode != null && nameNode.getTextContent().equals("ServiceClass")){
+                                String serviceClassName = cnode.getTextContent();
+                                String[] split = serviceClassName.split("[.]");
+                                StringBuilder sb = new StringBuilder();
+                                sb.append("http://");
+                                for (int i = split.length - ((split.length > 2)?2:1); i >= 0; i--) {
+                                    sb.append(split[i]);
+                                    if (i > 0){
+                                        sb.append(".");
+                                    }
+                                }
+                                return sb.toString();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return "ns";
     }
 }

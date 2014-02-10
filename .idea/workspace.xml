@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="First commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello-maven-plugin.iws" />
@@ -66,7 +68,39 @@
     <favorites_list name="hello-maven-plugin" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ServiceJavaFileParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="0" selection-start="2200" selection-end="2200" vertical-scroll-proportion="0.0" vertical-offset="754" max-vertical-offset="1422">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServicesXMLParser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="0" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.369863" vertical-offset="378" max-vertical-offset="1728">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Software/jdk1.6.0_45/src.zip!/org/w3c/dom/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="135" column="17" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.0" vertical-offset="3238" max-vertical-offset="16560">
+              <folding>
+                <element signature="e#0#42647#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -83,13 +117,13 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/GovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/rxt/ModuleCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/rxt/DependencyCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/xservices.rxt" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
       </list>
     </option>
   </component>
@@ -532,10 +566,15 @@
       <created>1391920842933</created>
       <updated>1391920842933</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1392021272921</created>
+      <updated>1392021272921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1871" height="1056" extended-state="6" />
+    <frame x="49" y="24" width="1871" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -547,7 +586,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23348017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -556,7 +595,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21839081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.311674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.311674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -628,13 +667,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="28" selection-start="567" selection-end="578" vertical-scroll-proportion="0.6053097" vertical-offset="0" max-vertical-offset="1062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2200" selection-end="2200" vertical-scroll-proportion="2.2300885" vertical-offset="0" max-vertical-offset="1422">
           <folding />
         </state>
       </provider>
@@ -711,9 +743,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2200" selection-end="2200" vertical-scroll-proportion="0.0" vertical-offset="754" max-vertical-offset="1422">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Software/jdk1.6.0_45/src.zip!/org/w3c/dom/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="17" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.0" vertical-offset="3238" max-vertical-offset="16560">
+          <folding>
+            <element signature="e#0#42647#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="57" selection-start="1965" selection-end="1965" vertical-scroll-proportion="1.0443686" vertical-offset="0" max-vertical-offset="1026">
+        <state line="46" column="0" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.369863" vertical-offset="378" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>
