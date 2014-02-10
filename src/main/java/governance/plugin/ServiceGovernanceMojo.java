@@ -32,6 +32,7 @@ import org.apache.maven.project.MavenProject;
 
 import java.io.File;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -170,29 +171,29 @@ public class ServiceGovernanceMojo extends AbstractMojo
             servicesXMLCount++;
 
             List<Object> serviceInfoList = ServicesXMLParser.parse(file);
-            Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
+            //Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
 
-            for (int i = 0; i < serviceInfoArray.length; i++){
-                serviceCreator.create((String[])serviceInfoArray[i]);
-                linkServiceWithModule((String[])serviceInfoArray[i]);
+            for (int i = 0; i < serviceInfoList.size(); i++){
+                serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
+                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i));
             }
 
         }else if (file.getName().endsWith(".java")){
             javaFileCount++;
 
             List<Object> serviceInfoList = ServiceJavaFileParser.parse(file);
-            Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
+            //Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
 
-            for (int i = 0; i < serviceInfoArray.length; i++){
-                serviceCreator.create((String[])serviceInfoArray[i]);
-                linkServiceWithModule((String[])serviceInfoArray[i]);
+            for (int i = 0; i < serviceInfoList.size(); i++){
+                serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
+                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i));
             }
         }
 
 
     }
 
-    public void linkServiceWithModule(String[] parameters) throws MojoExecutionException {
+    public void linkServiceWithModule(Map<String, String> parameters) throws MojoExecutionException {
 
         Model model = PomParser.parse(currentPOM);
         if (model == null){
@@ -206,7 +207,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
                 getAbsoluteArtifactResourcePath(new String[]{project.getArtifactId(), project.getVersion()});
 
         String dependencyAbsolutePath = serviceCreator.
-                getAbsoluteArtifactResourcePath(new String[]{parameters[0], parameters[1]});
+                getAbsoluteArtifactResourcePath(new String[]{parameters.get("name"),parameters.get("version")});
 
         if (!artifactCreatorUtil.isArtifactExisting(moduleAbsolutPath)){
             moduleCreator.create(new String[]{project.getArtifactId(), project.getVersion(), currentPOM.getAbsolutePath()});

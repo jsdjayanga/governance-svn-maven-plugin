@@ -1,6 +1,7 @@
 package governance.plugin.services;
 
 import com.google.inject.internal.util.$SourceProvider;
+import governance.plugin.utils.PackageToNamespace;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -12,8 +13,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by jayanga on 2/9/14.
@@ -45,7 +48,14 @@ public class ServicesXMLParser {
                         String description = (descriptionNode != null && descriptionNode.getTextContent() != "")? descriptionNode.getTextContent(): "";
                         String namespace = getNamespace(node);
 
-                        String[] serviceInfo = {name, version, "Axis2", description};
+                        //String[] serviceInfo = {name, namespace, version, "Axis2", description};
+                        Map<String, String> serviceInfo = new HashMap<String, String>();
+                        serviceInfo.put("name", name);
+                        serviceInfo.put("namespace", namespace);
+                        serviceInfo.put("version", version);
+                        serviceInfo.put("type", "Axis2");
+                        serviceInfo.put("description", description);
+
                         serviceInfoList.add(serviceInfo);
 
                         //System.out.println("============================:" + index + "|" + file.toString());
@@ -81,16 +91,12 @@ public class ServicesXMLParser {
                             Node nameNode = namedNodeMap.getNamedItem("name");
                             if (nameNode != null && nameNode.getTextContent().equals("ServiceClass")){
                                 String serviceClassName = cnode.getTextContent();
-                                String[] split = serviceClassName.split("[.]");
-                                StringBuilder sb = new StringBuilder();
-                                sb.append("http://");
-                                for (int i = split.length - ((split.length > 2)?2:1); i >= 0; i--) {
-                                    sb.append(split[i]);
-                                    if (i > 0){
-                                        sb.append(".");
-                                    }
+                                int dotOffSet = serviceClassName.lastIndexOf('.');
+                                if (dotOffSet == -1){
+                                    dotOffSet = serviceClassName.length();
                                 }
-                                return sb.toString();
+                                String namespace = PackageToNamespace.PackageToNamespace(serviceClassName.substring(0, dotOffSet));
+                                return namespace;
                             }
                         }
                     }
