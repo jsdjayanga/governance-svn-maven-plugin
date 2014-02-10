@@ -55,12 +55,12 @@ public class ServiceGovernanceMojo extends AbstractMojo
 	//GReg resource paths
 	public static final String GREG_TRUNK_LOCATION = "/_system/governance";
 	public static final String GREG_MODULE_RESOURCE_PATH = "/trunk/modules/";
-    public static final String GREG_SERVICE_RESOURCE_PATH = "/trunk/xservices/";
+    public static final String GREG_SERVICE_RESOURCE_PATH = "/trunk/services/";
 	public static final String GREG_DEPENDENCY_RESOURCE_PATH = "/trunk/dependencies/";
 
 	//End point references
 	private String moduleEndPointRef = ServiceGovernanceMojo.GREG_URL + "Module.ModuleHttpsSoap12Endpoint";
-    private String serviceEndPointRef = ServiceGovernanceMojo.GREG_URL + "xService.xServiceHttpsSoap12Endpoint";
+    private String serviceEndPointRef = ServiceGovernanceMojo.GREG_URL + "Service.ServiceHttpsSoap12Endpoint";
 	private String dependecnyEndPointRef =  ServiceGovernanceMojo.GREG_URL + "Dependency.DependencyHttpsSoap12Endpoint";
 	private String genericArtifactManagerEndPointRef = ServiceGovernanceMojo.GREG_URL +
 			"ManageGenericArtifactService.ManageGenericArtifactServiceHttpsSoap12Endpoint";
@@ -158,8 +158,8 @@ public class ServiceGovernanceMojo extends AbstractMojo
     private void addAssociation(String sourcePath, String destinationPath, String type) throws MojoExecutionException{
     	String addAssocationRequest = GovernanceSOAPMessageCreator.
     			createAddAssociationRequst(sourcePath, destinationPath, type, "add");
-    	
-    	RegistrySOAPClient.sendMessage(relationServiceEndPointRef, addAssocationRequest);
+
+        RegistrySOAPClient.sendMessage(relationServiceEndPointRef, addAssocationRequest);
 
         getLog().debug("Association added. [Source=" + sourcePath + ", Destination=" + destinationPath + "]");
     }
@@ -207,7 +207,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
                 getAbsoluteArtifactResourcePath(new String[]{project.getArtifactId(), project.getVersion()});
 
         String dependencyAbsolutePath = serviceCreator.
-                getAbsoluteArtifactResourcePath(new String[]{parameters.get("name"),parameters.get("version")});
+                getAbsoluteArtifactResourcePath(new String[]{parameters.get("name"),parameters.get("namespace")});
 
         if (!artifactCreatorUtil.isArtifactExisting(moduleAbsolutPath)){
             moduleCreator.create(new String[]{project.getArtifactId(), project.getVersion(), currentPOM.getAbsolutePath()});

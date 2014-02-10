@@ -47,6 +47,7 @@ public abstract class  AbstractArtifactCreator{
 		
 	public boolean createArtifact(String resourcePath, String soapRequest) throws MojoExecutionException{
 		boolean isArtifactCreated = false;
+
 		if (artifactCreatorUtil.isArtifactExisting(resourcePath) == false){
 			RegistrySOAPClient.sendMessage(artifactEndPointRef, soapRequest);
 			createdArtifacteCount++;

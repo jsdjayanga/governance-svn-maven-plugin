@@ -35,7 +35,7 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
                 n = n.getParent();
             }
 
-            String packageName = "defaultPackage";
+            String packageName = "defaultpackage";
             if (n != null){
                 PackageDeclaration pd = ((CompilationUnit) n).getPackage();
                 if (pd != null){
@@ -76,7 +76,7 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
                 n = n.getParent();
             }
 
-            String packageName = "defaultPackage";
+            String packageName = "defaultpackage";
             if (n != null){
                 PackageDeclaration pd = ((CompilationUnit) n).getPackage();
                 if (pd != null){
