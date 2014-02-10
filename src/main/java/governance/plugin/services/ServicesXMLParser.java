@@ -104,6 +104,6 @@ public class ServicesXMLParser {
             }
         }
 
-        return "ns";
+        return "http://defaultpackage";
     }
 }
