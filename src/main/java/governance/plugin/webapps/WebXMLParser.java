@@ -1,6 +1,5 @@
 package governance.plugin.webapps;
 
-import com.google.inject.internal.util.$SourceProvider;
 import governance.plugin.utils.PackageToNamespace;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -36,33 +35,27 @@ public class WebXMLParser {
                         if (servletChildNodeList != null){
 
                             String servletName = getServletName(servletChildNodeList, "servlet-name");
-                            String servletDisplyName = getServletName(servletChildNodeList, "display-name");
-                            String servletClassName = getServletName(servletChildNodeList, "servlet-class");
+                            String servletDisplayName = getServletName(servletChildNodeList, "display-name");
+                            String servletClassQName = getServletName(servletChildNodeList, "servlet-class");
                             String version = "1.0.0";
                             String description = "";
 
                             servletName = servletName.trim();
-                            servletDisplyName = servletDisplyName.trim();
-                            servletClassName = servletClassName.trim();
+                            servletDisplayName = servletDisplayName.trim();
+                            servletClassQName = servletClassQName.trim();
 
-                            int dotOffSet = servletClassName.lastIndexOf('.');
-                            if (dotOffSet == -1){
-                                dotOffSet = servletClassName.length();
-                            }
-                            String namespace = PackageToNamespace.PackageToNamespace(servletClassName.substring(0, dotOffSet));
+                            int dotOffSet = servletClassQName.lastIndexOf('.') + 1;
+
+                            String namespace = PackageToNamespace.PackageToNamespace(servletClassQName.substring(0, dotOffSet));
                             namespace = namespace.toLowerCase();
 
-                            String serviceClass = servletClassName.substring(dotOffSet);
-
-                            if (servletDisplyName != null && servletDisplyName.equals("")){
-                                servletDisplyName = servletName;
-                            }
+                            //String serviceClassName = servletClassQName.substring(dotOffSet);
 
                             Map<String, String> serviceInfo = new HashMap<String, String>();
                             serviceInfo.put("name", servletName.trim());
                             serviceInfo.put("namespace", namespace.trim());
-                            serviceInfo.put("serviceclass", namespace);
-                            serviceInfo.put("displayname", servletDisplyName);
+                            serviceInfo.put("serviceclass", servletClassQName.trim());
+                            serviceInfo.put("displayname", servletDisplayName.trim());
                             serviceInfo.put("version", version);
                             serviceInfo.put("description", description);
 

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/webapplication.rxt" afterPath="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello-maven-plugin.iws" />
@@ -67,28 +69,7 @@
     <favorites_list name="hello-maven-plugin" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ServiceAnnotationVisitor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="47" selection-start="1557" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebXMLParser.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="816" selection-end="816" vertical-scroll-proportion="0.5321101" vertical-offset="138" max-vertical-offset="2268">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -111,15 +92,15 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceGovernanceSOAPMessageCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/rxt/AbstractArtifactCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceWebXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
       </list>
     </option>
   </component>
@@ -202,6 +183,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -404,7 +386,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,6 +432,26 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -473,45 +474,12 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -539,6 +507,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -664,7 +645,11 @@
       <created>1392124096766</created>
       <updated>1392124096766</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cleaned up  a unwanted log.&#10;">
+      <created>1392124256313</created>
+      <updated>1392124256313</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,20 +666,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2971246" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13668671" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1377802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.261345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27214515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27214515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -719,12 +704,36 @@
     <MESSAGE value="Adding web app governance capability&#10;" />
     <MESSAGE value="Cleaning up the code" />
     <MESSAGE value="Trimming name and namespace fields before using.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trimming name and namespace fields before using.&#10;" />
+    <MESSAGE value="Cleaned up  a unwanted log.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up  a unwanted log.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="60" selection-start="2411" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="781" max-vertical-offset="1422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="84" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="2142">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="41" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="30" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
@@ -784,9 +793,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/Software/jdk1.6.0_45/src.zip!/org/w3c/dom/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="17" selection-start="6029" selection-end="6029" vertical-scroll-proportion="-1.6917808" vertical-offset="3238" max-vertical-offset="16560">
-          <folding />
-        </state>
+        <state line="135" column="17" selection-start="6029" selection-end="6029" vertical-scroll-proportion="-1.6917808" vertical-offset="3238" max-vertical-offset="16560" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Software/jdk1.6.0_45/src.zip!/java/lang/String.java">
@@ -852,16 +859,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina/7.0.34/tomcat-catalina-7.0.34.jar!/org/apache/catalina/loader/WebappLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="22.32" vertical-offset="648" max-vertical-offset="1926">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.64220184" vertical-offset="390" max-vertical-offset="1314">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="22.32" vertical-offset="648" max-vertical-offset="1926" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceGovernanceSOAPMessageCreator.java">
@@ -878,46 +876,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/module.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.55382216" vertical-offset="275" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/webapplication.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.6068643" vertical-offset="151" max-vertical-offset="882">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xservices.rxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="21" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.7020281" vertical-offset="0" max-vertical-offset="846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="193" column="0" selection-start="8657" selection-end="8657" vertical-scroll-proportion="4.211009" vertical-offset="378" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="13" selection-start="1994" selection-end="1994" vertical-scroll-proportion="1.347894" vertical-offset="0" max-vertical-offset="1422">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="51" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.8985959" vertical-offset="0" max-vertical-offset="792">
           <folding />
         </state>
       </provider>
@@ -929,30 +890,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="32" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.2527301" vertical-offset="648" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="41" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/webapplication.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="20" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.62138087" vertical-offset="0" max-vertical-offset="898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xservices.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="31" selection-start="876" selection-end="876" vertical-scroll-proportion="0.40089086" vertical-offset="0" max-vertical-offset="898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/module.rxt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="34" selection-start="0" selection-end="1580" vertical-scroll-proportion="0.6815145" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="60" selection-start="2411" selection-end="2417" vertical-scroll-proportion="0.6993318" vertical-offset="434" max-vertical-offset="1332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="68" selection-start="2582" selection-end="2582" vertical-scroll-proportion="1.0" vertical-offset="79" max-vertical-offset="1746">
+        <state line="56" column="68" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.7138085" vertical-offset="79" max-vertical-offset="1746">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="773" selection-end="797" vertical-scroll-proportion="-0.6238532" vertical-offset="768" max-vertical-offset="1422">
+        <state line="26" column="66" selection-start="773" selection-end="797" vertical-scroll-proportion="0.24917673" vertical-offset="133" max-vertical-offset="1422">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="47" selection-start="1557" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1728">
+        <state line="45" column="47" selection-start="1557" selection-end="1568" vertical-scroll-proportion="0.24917673" vertical-offset="493" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="816" selection-end="816" vertical-scroll-proportion="0.5321101" vertical-offset="138" max-vertical-offset="2268">
+        <state line="57" column="84" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.60482985" vertical-offset="475" max-vertical-offset="2142">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
