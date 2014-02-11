@@ -26,8 +26,6 @@ public class WebXMLParser {
 
         Document document = parseFile(file);
         if (document != null){
-            System.out.println("====================: " + document.getDocumentElement().getNodeName());
-
             NodeList servletNodeList = document.getElementsByTagName("servlet");
             if (servletNodeList != null){
 
