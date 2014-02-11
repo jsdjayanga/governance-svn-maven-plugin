@@ -50,8 +50,8 @@ public class ServicesXMLParser {
 
                         //String[] serviceInfo = {name, namespace, version, "Axis2", description};
                         Map<String, String> serviceInfo = new HashMap<String, String>();
-                        serviceInfo.put("name", name);
-                        serviceInfo.put("namespace", namespace);
+                        serviceInfo.put("name", name.trim());
+                        serviceInfo.put("namespace", namespace.trim());
                         serviceInfo.put("version", version);
                         serviceInfo.put("type", "Axis2");
                         serviceInfo.put("description", description);
@@ -88,7 +88,7 @@ public class ServicesXMLParser {
                         if (namedNodeMap != null){
                             Node nameNode = namedNodeMap.getNamedItem("name");
                             if (nameNode != null && nameNode.getTextContent().equals("ServiceClass")){
-                                String serviceClassName = cnode.getTextContent();
+                                String serviceClassName = cnode.getTextContent().trim();
                                 int dotOffSet = serviceClassName.lastIndexOf('.');
                                 if (dotOffSet == -1){
                                     dotOffSet = serviceClassName.length();

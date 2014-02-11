@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello-maven-plugin.iws" />
@@ -67,21 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WebXMLParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
+      <file leaf-file-name="ServiceAnnotationVisitor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="88" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="2304">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebAppGovernanceMojo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="4.211009" vertical-offset="0" max-vertical-offset="4266">
+            <state line="45" column="47" selection-start="1557" selection-end="1568" vertical-scroll-proportion="-0.5412844" vertical-offset="1074" max-vertical-offset="1728">
               <folding />
             </state>
           </provider>
@@ -110,8 +103,6 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceGovernanceSOAPMessageCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/rxt/AbstractArtifactCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceWebXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java" />
@@ -119,6 +110,8 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java" />
       </list>
     </option>
   </component>
@@ -655,7 +648,11 @@
       <created>1392123309179</created>
       <updated>1392123309179</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cleaning up the code">
+      <created>1392123793154</created>
+      <updated>1392123793154</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -708,7 +705,8 @@
     <MESSAGE value="Updating POM file finding mechanism" />
     <MESSAGE value="Cleaning up the code.&#10;" />
     <MESSAGE value="Adding web app governance capability&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding web app governance capability&#10;" />
+    <MESSAGE value="Cleaning up the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up the code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -818,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="773" selection-end="797" vertical-scroll-proportion="0.5504587" vertical-offset="0" max-vertical-offset="1422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/utils/PackageToNamespace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="25" selection-start="135" selection-end="135" vertical-scroll-proportion="0.16513762" vertical-offset="0" max-vertical-offset="654">
@@ -839,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="34" selection-start="724" selection-end="724" vertical-scroll-proportion="0.56962025" vertical-offset="0" max-vertical-offset="1728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/GovernanceMojo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="169" column="82" selection-start="7243" selection-end="7250" vertical-scroll-proportion="0.0" vertical-offset="2298" max-vertical-offset="3006">
@@ -856,13 +840,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina/7.0.34/tomcat-catalina-7.0.34.jar!/org/apache/catalina/loader/WebappLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="22.32" vertical-offset="648" max-vertical-offset="1926">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="33" selection-start="3968" selection-end="4181" vertical-scroll-proportion="0.46645865" vertical-offset="1105" max-vertical-offset="1746">
           <folding />
         </state>
       </provider>
@@ -932,18 +909,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="1" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-0.027522936" vertical-offset="486" max-vertical-offset="4266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="88" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="2304">
+        <state line="64" column="75" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.66972476" vertical-offset="714" max-vertical-offset="2304">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServicesXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="4.211009" vertical-offset="0" max-vertical-offset="4266">
+        <state line="56" column="68" selection-start="2582" selection-end="2582" vertical-scroll-proportion="1.0" vertical-offset="79" max-vertical-offset="1746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceJavaFileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="66" selection-start="773" selection-end="797" vertical-scroll-proportion="-0.6238532" vertical-offset="768" max-vertical-offset="1422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/services/ServiceAnnotationVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="47" selection-start="1557" selection-end="1568" vertical-scroll-proportion="-0.5412844" vertical-offset="1074" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>

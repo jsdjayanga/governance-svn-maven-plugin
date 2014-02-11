@@ -61,8 +61,8 @@ public class WebXMLParser {
                             }
 
                             Map<String, String> serviceInfo = new HashMap<String, String>();
-                            serviceInfo.put("name", servletName);
-                            serviceInfo.put("namespace", namespace);
+                            serviceInfo.put("name", servletName.trim());
+                            serviceInfo.put("namespace", namespace.trim());
                             serviceInfo.put("serviceclass", namespace);
                             serviceInfo.put("displayname", servletDisplyName);
                             serviceInfo.put("version", version);

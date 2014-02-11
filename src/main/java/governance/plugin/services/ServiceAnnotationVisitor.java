@@ -39,12 +39,12 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
                     packageName = pd.getName().getFullyQualifiedName();
                 }
             }
-            String namespace = PackageToNamespace.PackageToNamespace(packageName);
+            String namespace = PackageToNamespace.PackageToNamespace(packageName.trim());
 
             //String[] serviceInfo = {serviceName, namespace, "1.0.0", "JAX-WS", ""};
             Map<String, String> serviceInfo = new HashMap<String, String>();
-            serviceInfo.put("name", serviceName);
-            serviceInfo.put("namespace", namespace);
+            serviceInfo.put("name", serviceName.trim());
+            serviceInfo.put("namespace", namespace.trim());
             serviceInfo.put("version", "1.0.0");
             serviceInfo.put("type", "JAX-WS");
 
@@ -78,12 +78,12 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
                 }
             }
 
-            String namespace = PackageToNamespace.PackageToNamespace(packageName);
+            String namespace = PackageToNamespace.PackageToNamespace(packageName.trim());
 
             //String[] serviceInfo = {serviceName, "1.0.0", "JAX-RS", ""};
             Map<String, String> serviceInfo = new HashMap<String, String>();
-            serviceInfo.put("name", serviceName);
-            serviceInfo.put("namespace", namespace);
+            serviceInfo.put("name", serviceName.trim());
+            serviceInfo.put("namespace", namespace.trim());
             serviceInfo.put("version", "1.0.0");
             serviceInfo.put("type", "JAX-RS");
 
