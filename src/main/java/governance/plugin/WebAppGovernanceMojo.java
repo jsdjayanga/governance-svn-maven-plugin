@@ -21,9 +21,9 @@ import governance.plugin.rxt.DependencyCreator;
 import governance.plugin.rxt.ModuleCreator;
 import governance.plugin.services.ServiceCreator;
 import governance.plugin.services.ServiceJavaFileParser;
+import governance.plugin.services.ServicesXMLParser;
 import governance.plugin.webapps.WebApplicationCreator;
 import governance.plugin.webapps.WebXMLParser;
-import governance.plugin.services.ServicesXMLParser;
 import org.apache.maven.model.Model;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -41,8 +41,8 @@ import java.util.Map;
 /**
  * Generates dependency tree by reading a pom.xml
  */
-@Mojo( name = "service", defaultPhase = LifecyclePhase.DEPLOY,  aggregator = true)
-public class ServiceGovernanceMojo extends AbstractMojo
+@Mojo( name = "webapp", defaultPhase = LifecyclePhase.DEPLOY,  aggregator = true)
+public class WebAppGovernanceMojo extends AbstractMojo
 {
 	//TODO : Get from a Configuration
 
@@ -63,13 +63,13 @@ public class ServiceGovernanceMojo extends AbstractMojo
 	public static final String GREG_DEPENDENCY_RESOURCE_PATH = "/trunk/dependencies/";
 
 	//End point references
-	private String moduleEndPointRef = ServiceGovernanceMojo.GREG_URL + "Module.ModuleHttpsSoap12Endpoint";
-    private String serviceEndPointRef = ServiceGovernanceMojo.GREG_URL + "Service.ServiceHttpsSoap12Endpoint";
-    private String webAppEndPointRef = ServiceGovernanceMojo.GREG_URL + "WebApplication.WebApplicationHttpsSoap12Endpoint";
-	private String dependecnyEndPointRef =  ServiceGovernanceMojo.GREG_URL + "Dependency.DependencyHttpsSoap12Endpoint";
-	private String genericArtifactManagerEndPointRef = ServiceGovernanceMojo.GREG_URL +
+	private String moduleEndPointRef = WebAppGovernanceMojo.GREG_URL + "Module.ModuleHttpsSoap12Endpoint";
+    private String serviceEndPointRef = WebAppGovernanceMojo.GREG_URL + "Service.ServiceHttpsSoap12Endpoint";
+    private String webAppEndPointRef = WebAppGovernanceMojo.GREG_URL + "WebApplication.WebApplicationHttpsSoap12Endpoint";
+	private String dependecnyEndPointRef =  WebAppGovernanceMojo.GREG_URL + "Dependency.DependencyHttpsSoap12Endpoint";
+	private String genericArtifactManagerEndPointRef = WebAppGovernanceMojo.GREG_URL +
 			"ManageGenericArtifactService.ManageGenericArtifactServiceHttpsSoap12Endpoint";
-	private String relationServiceEndPointRef = ServiceGovernanceMojo.GREG_URL
+	private String relationServiceEndPointRef = WebAppGovernanceMojo.GREG_URL
 			+ "RelationAdminService.RelationAdminServiceHttpsSoap12Endpoint";
 
 	private int pomFileCount = 0;
@@ -98,7 +98,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
     @Parameter( property = "location" )
     private String repositoryLocation;
 
-    public ServiceGovernanceMojo() throws MojoExecutionException{
+    public WebAppGovernanceMojo() throws MojoExecutionException{
     	 moduleCreator = new ModuleCreator(getLog(), moduleEndPointRef, genericArtifactManagerEndPointRef);
          serviceCreator = new ServiceCreator(getLog(), serviceEndPointRef, genericArtifactManagerEndPointRef);
          webApplicationCreator = new WebApplicationCreator(getLog(), webAppEndPointRef, genericArtifactManagerEndPointRef);
@@ -181,30 +181,17 @@ public class ServiceGovernanceMojo extends AbstractMojo
     public void process(File file) throws MojoExecutionException{
         getLog().debug("Processing " + file.getAbsoluteFile());
 
-    	if (file.getName().equals("services.xml")){
-            servicesXMLCount++;
+    	if(file.getName().equals("web.xml")){
+            webXMLFileCount++;
 
-            List<Object> serviceInfoList = ServicesXMLParser.parse(file);
-            //Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
+            List<Object> serviceInfoList = WebXMLParser.parse(file);
 
             for (int i = 0; i < serviceInfoList.size(); i++){
-                serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
+                webApplicationCreator.create((Map<String, String>)serviceInfoList.get(i));
                 linkServiceWithModule((Map<String, String>)serviceInfoList.get(i), file);
             }
 
-        }else if (file.getName().endsWith(".java")){
-            javaFileCount++;
-
-            List<Object> serviceInfoList = ServiceJavaFileParser.parse(file);
-            //Object[] serviceInfoArray = serviceInfoList.toArray(new Object[serviceInfoList.size()]);
-
-            for (int i = 0; i < serviceInfoList.size(); i++){
-                serviceCreator.create((Map<String, String>)serviceInfoList.get(i));
-                linkServiceWithModule((Map<String, String>)serviceInfoList.get(i), file);
-            }
         }
-
-
     }
 
     public void linkServiceWithModule(Map<String, String> parameters, File file) throws MojoExecutionException {
@@ -225,7 +212,7 @@ public class ServiceGovernanceMojo extends AbstractMojo
         String moduleAbsolutPath = moduleCreator.
                 getAbsoluteArtifactResourcePath(new String[]{project.getArtifactId(), project.getVersion()});
 
-        String dependencyAbsolutePath = serviceCreator.
+        String dependencyAbsolutePath = webApplicationCreator.
                 getAbsoluteArtifactResourcePath(new String[]{parameters.get("name"),parameters.get("namespace")});
 
         if (!artifactCreatorUtil.isArtifactExisting(moduleAbsolutPath)){

@@ -1,0 +1,44 @@
+<artifactType type="application/vnd.wso2-webapplication+xml" shortName="webapplications" singularLabel="Web Application" pluralLabel="Web Applications" hasNamespace="false" iconSet="9">
+    <storagePath>/trunk/webapplications/@{namespace}/@{name}</storagePath>
+    <nameAttribute>overview_name</nameAttribute>
+    <namespaceAttribute>overview_namespace</namespaceAttribute>
+    <!--lifecycle>ServiceLifeCycle</lifecycle-->
+    <ui>
+        <list>
+            <column name="Web Application Name">
+                <data type="text" value="overview_name"/>
+            </column>
+            <column name="Web Application Version">
+                <data type="path" value="overview_version" href="@{storagePath}"/>
+            </column>
+            <column name="Web Application Namespace">
+                <data type="text" value="overview_namespace"/>
+            </column>
+        </list>
+    </ui>
+    <relationships>
+        <association type="isConsumedBy" source="@{assets_entry:value}"/>
+    </relationships>
+    <content>
+        <table name="Overview">
+            <field type="text" required="true" readonly="true">
+                <name label="Name">Name</name>
+            </field>
+            <field type="text" required="true" readonly="true">
+                <name label="Namespace">Namespace</name>
+            </field>
+            <field type="text">
+                <name label="DisplayName">DisplayName</name>
+            </field>
+            <field type="text">
+                <name label="ServiceClass">ServiceClass</name>
+            </field>
+            <field type="text">
+                <name label="Version">Version</name>
+            </field>
+            <field type="text-area">
+                <name label="Description">Description</name>
+            </field>
+        </table>
+    </content>
+</artifactType>
