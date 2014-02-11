@@ -57,8 +57,6 @@ public class ServicesXMLParser {
                         serviceInfo.put("description", description);
 
                         serviceInfoList.add(serviceInfo);
-
-                        //System.out.println("============================:" + index + "|" + file.toString());
                     }
                 }
             } catch (SAXException e) {

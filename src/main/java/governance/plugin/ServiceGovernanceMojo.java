@@ -146,11 +146,6 @@ public class ServiceGovernanceMojo extends AbstractMojo
     		}else{
                 File pomFile = findPOMFileInCurrentDirectory(children);
                 if (pomFile != null){
-                    //currentPOM = pomFile;
-
-                    System.out.println("======================:" + pomFile.getParent());
-                    System.out.println("======================:" + pomFile.getPath());
-
                     pomMap.put(pomFile.getParent(), pomFile);
                 }
 

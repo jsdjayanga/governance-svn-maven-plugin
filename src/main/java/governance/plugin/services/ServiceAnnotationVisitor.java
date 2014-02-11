@@ -19,9 +19,6 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
 
     @Override
     public boolean visit(MarkerAnnotation node) {
-        //System.out.println("====================MarkerAnnotation");
-        //System.out.println(node.getTypeName().toString());
-
         if (node.getTypeName().toString().equals("WebService")){
 
             ASTNode n = node;
@@ -59,9 +56,6 @@ public class ServiceAnnotationVisitor extends ASTVisitor {
 
     @Override
     public boolean visit(SingleMemberAnnotation node) {
-        //System.out.println("====================SingleMemberAnnotation");
-        //System.out.println(node.getTypeName().toString());
-
         if (node.getTypeName().toString().equals("Path")){
 
 
