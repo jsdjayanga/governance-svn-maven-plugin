@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_api_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_catalina_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_7_0_34.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/governance-svn-maven-plugin.iml" afterPath="$PROJECT_DIR$/governance-svn-maven-plugin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello-maven-plugin.iws" />
@@ -82,10 +67,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="WebXMLParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="88" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="2304">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WebAppGovernanceMojo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="0.42201835" vertical-offset="2478" max-vertical-offset="4266">
+            <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="4.211009" vertical-offset="0" max-vertical-offset="4266">
               <folding />
             </state>
           </provider>
@@ -655,7 +651,11 @@
       <created>1392094235594</created>
       <updated>1392094235594</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding web app governance capability&#10;">
+      <created>1392123309179</created>
+      <updated>1392123309179</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -707,7 +707,8 @@
     <MESSAGE value="Updated to set default package if the namespace is not available&#10;" />
     <MESSAGE value="Updating POM file finding mechanism" />
     <MESSAGE value="Cleaning up the code.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up the code.&#10;" />
+    <MESSAGE value="Adding web app governance capability&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding web app governance capability&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -880,22 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="51" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.8985959" vertical-offset="0" max-vertical-offset="792">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="13" selection-start="1994" selection-end="1994" vertical-scroll-proportion="1.2636505" vertical-offset="54" max-vertical-offset="1422">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/dependency.rxt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="31" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.6099844" vertical-offset="329" max-vertical-offset="972">
@@ -931,9 +916,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="13" selection-start="1994" selection-end="1994" vertical-scroll-proportion="1.347894" vertical-offset="0" max-vertical-offset="1422">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="51" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.8985959" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="92" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.58715594" vertical-offset="804" max-vertical-offset="2376">
+        <state line="56" column="88" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="2304">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -942,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="0.42201835" vertical-offset="2478" max-vertical-offset="4266">
+        <state line="172" column="35" selection-start="7663" selection-end="7683" vertical-scroll-proportion="4.211009" vertical-offset="0" max-vertical-offset="4266">
           <folding />
         </state>
       </provider>

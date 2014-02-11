@@ -56,10 +56,6 @@ public class WebXMLParser {
 
                             String serviceClass = servletClassName.substring(dotOffSet);
 
-                            System.out.println("========================== [Name=" + servletName.trim()
-                                    + ", DisplayName=" + servletDisplyName.trim()
-                                    + ", ServiceClass=" + servletClassName.trim() + "]");
-
                             if (servletDisplyName != null && servletDisplyName.equals("")){
                                 servletDisplyName = servletName;
                             }
