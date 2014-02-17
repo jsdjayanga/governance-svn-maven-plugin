@@ -46,10 +46,11 @@ public class WebAppGovernanceMojo extends AbstractMojo
 {
 	//TODO : Get from a Configuration
 
-	public static final String GREG_URL = "https://localhost:9443/services/";
+	public static final String GREG_URL = "https://localhost:9443/admin/services/";
 	public static final String GREG_PASSWORD = "admin";
 	public static final String GREG_USERNAME = "admin";
-	public static final String GREG_HOME = "/home/jayanga/WSO2/WSO2Software/wso2greg-4.6.0";
+	//public static final String GREG_HOME = "/home/jayanga/WSO2/WSO2Software/wso2greg-4.6.0";
+    public static final String GREG_HOME = "/home/jayanga/WSO2/WSO2Software/wso2store-1.0.0";
 
 	//GReg Media types
 	public static final String GREG_MODULE_MEDIA_TYPE = "application/vnd.wso2-module+xml";
