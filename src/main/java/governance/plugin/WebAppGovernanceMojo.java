@@ -60,13 +60,14 @@ public class WebAppGovernanceMojo extends AbstractMojo
 	public static final String GREG_TRUNK_LOCATION = "/_system/governance";
 	public static final String GREG_MODULE_RESOURCE_PATH = "/trunk/modules/";
     public static final String GREG_SERVICE_RESOURCE_PATH = "/trunk/services/";
-    public static final String GREG_WEBAPP_RESOURCE_PATH = "/trunk/webapplications/";
+    public static final String GREG_WEBAPP_RESOURCE_PATH = "/trunk/webapps/";
 	public static final String GREG_DEPENDENCY_RESOURCE_PATH = "/trunk/dependencies/";
 
 	//End point references
 	private String moduleEndPointRef = WebAppGovernanceMojo.GREG_URL + "Module.ModuleHttpsSoap12Endpoint";
     private String serviceEndPointRef = WebAppGovernanceMojo.GREG_URL + "Service.ServiceHttpsSoap12Endpoint";
-    private String webAppEndPointRef = WebAppGovernanceMojo.GREG_URL + "WebApplication.WebApplicationHttpsSoap12Endpoint";
+    //private String webAppEndPointRef = WebAppGovernanceMojo.GREG_URL + "WebApplication.WebApplicationHttpsSoap12Endpoint";
+    private String webAppEndPointRef = WebAppGovernanceMojo.GREG_URL + "Webapp.WebappHttpsSoap12Endpoint";
 	private String dependecnyEndPointRef =  WebAppGovernanceMojo.GREG_URL + "Dependency.DependencyHttpsSoap12Endpoint";
 	private String genericArtifactManagerEndPointRef = WebAppGovernanceMojo.GREG_URL +
 			"ManageGenericArtifactService.ManageGenericArtifactServiceHttpsSoap12Endpoint";

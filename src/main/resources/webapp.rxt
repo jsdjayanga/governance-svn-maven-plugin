@@ -1,26 +1,27 @@
-<artifactType type="application/vnd.wso2-webapplication+xml" shortName="webapplications" singularLabel="Web Application" pluralLabel="Web Applications" hasNamespace="false" iconSet="9">
-    <storagePath>/trunk/webapplications/@{namespace}/@{name}</storagePath>
+<?xml version="1.0"?>
+<artifactType type="application/vnd.wso2-webapp+xml" shortName="webapp" singularLabel="Webapp" pluralLabel="Webapps" hasNamespace="false" iconSet="27">
+    <storagePath>/trunk/webapps/@{namespace}/@{name}</storagePath>
     <nameAttribute>overview_name</nameAttribute>
     <namespaceAttribute>overview_namespace</namespaceAttribute>
-    <!--lifecycle>ServiceLifeCycle</lifecycle-->
+    <lifecycle>SimpleLifeCycle</lifecycle>
     <ui>
         <list>
-            <column name="Web Application Name">
-                <data type="text" value="overview_name"/>
+            <column name="Webapp Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
             </column>
-            <column name="Web Application Version">
+            <column name="Webapp Version">
                 <data type="path" value="overview_version" href="@{storagePath}"/>
             </column>
-            <column name="Web Application Namespace">
-                <data type="text" value="overview_namespace"/>
+            <column name="Description">
+                <data type="text" value="overview_description"/>
             </column>
         </list>
     </ui>
-    <relationships>
-        <association type="isConsumedBy" source="@{assets_entry:value}"/>
-    </relationships>
     <content>
         <table name="Overview">
+            <field type="text" required="true">
+                <name>Provider</name>
+            </field>
             <field type="text" required="true" readonly="true">
                 <name label="Name">Name</name>
             </field>
@@ -38,6 +39,14 @@
             </field>
             <field type="text-area">
                 <name label="Description">Description</name>
+            </field>
+        </table>
+        <table name="Images">
+            <field type="text" required="true">
+                <name>Thumbnail</name>
+            </field>
+            <field type="text" required="true">
+                <name>Banner</name>
             </field>
         </table>
     </content>
