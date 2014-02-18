@@ -62,10 +62,13 @@ public class WebApplicationCreator extends AbstractArtifactCreator {
         String name = parameters[0];
         String namespace = parameters[1];
 
+        name = name.trim();
+        namespace = namespace.trim();
+
         String[] path = namespace.substring("http://".length()).split("[.]");
         StringBuilder sb = new StringBuilder();
         for (int i = path.length - 1; i >= 0 ; i--){
-            sb.append(path[i] + "/");
+            if (path[i].trim().length() > 0) sb.append(path[i].trim() + "/");
         }
 
         return ServiceGovernanceMojo.GREG_WEBAPP_RESOURCE_PATH  + sb.toString() + name;
