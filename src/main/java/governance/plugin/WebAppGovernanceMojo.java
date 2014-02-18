@@ -222,7 +222,8 @@ public class WebAppGovernanceMojo extends AbstractMojo
         }
 
         //Adding association for each service with the module
-        addAssociation(moduleAbsolutPath, dependencyAbsolutePath, "ownedBy");
+        addAssociation(moduleAbsolutPath, dependencyAbsolutePath, "depends");
+        addAssociation(dependencyAbsolutePath, moduleAbsolutPath, "usedBy");
     }
 
     private File findPOMFileInCurrentDirectory(File[] files){

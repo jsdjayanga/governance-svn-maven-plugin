@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1829e4f-9141-4567-a269-bd2941a66796" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/webapplication.rxt" afterPath="$PROJECT_DIR$/src/main/resources/webapp.rxt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" afterPath="$PROJECT_DIR$/target/governance-svn-maven-plugin-1.0.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" afterPath="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-plugin-help.properties" afterPath="$PROJECT_DIR$/target/maven-plugin-help.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -71,7 +69,26 @@
     <favorites_list name="hello-maven-plugin" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ServiceGovernanceMojo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="237" column="73" selection-start="10703" selection-end="10709" vertical-scroll-proportion="0.0" vertical-offset="3398" max-vertical-offset="4536">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebAppGovernanceMojo.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="225" column="64" selection-start="10182" selection-end="10182" vertical-scroll-proportion="0.7735537" vertical-offset="3240" max-vertical-offset="4320">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -100,9 +117,9 @@
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebXMLParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/GovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebAppGovernanceSOAPMessageCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/webapplication.rxt" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java" />
       </list>
     </option>
   </component>
@@ -435,26 +452,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -477,12 +474,45 @@
       </MavenSettings>
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -510,19 +540,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -664,7 +681,11 @@
       <created>1392629386473</created>
       <updated>1392629386473</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated to work with ES and renaming webapps&#10;">
+      <created>1392647206352</created>
+      <updated>1392647206352</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -684,10 +705,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16129032" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16293056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28868234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2077638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258786" sideWeight="0.49972662" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -723,7 +744,8 @@
     <MESSAGE value="Fixing some issues with field reading.&#10;" />
     <MESSAGE value="removing xservice rxt file&#10;" />
     <MESSAGE value="updated to work with ES&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated to work with ES&#10;" />
+    <MESSAGE value="updated to work with ES and renaming webapps&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated to work with ES and renaming webapps&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -918,20 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="37" selection-start="8564" selection-end="8585" vertical-scroll-proportion="-0.24324325" vertical-offset="3240" max-vertical-offset="4302">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="73" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.21283785" vertical-offset="648" max-vertical-offset="4518">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/webapps/WebApplicationCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="26" selection-start="1190" selection-end="1201" vertical-scroll-proportion="0.7297297" vertical-offset="0" max-vertical-offset="1332">
@@ -942,6 +950,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/webapp.rxt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="15" selection-start="2101" selection-end="2101" vertical-scroll-proportion="1.581081" vertical-offset="0" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/ServiceGovernanceMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="73" selection-start="10703" selection-end="10709" vertical-scroll-proportion="0.0" vertical-offset="3398" max-vertical-offset="4536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/governance/plugin/WebAppGovernanceMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="64" selection-start="10182" selection-end="10182" vertical-scroll-proportion="0.7735537" vertical-offset="3240" max-vertical-offset="4320">
           <folding />
         </state>
       </provider>
